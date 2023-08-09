@@ -2,9 +2,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background-color: white;
 
   height: 80px;
   margin-bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(211, 211, 211);
 }
 
 .left-section {
@@ -59,6 +68,25 @@
   margin-left: -2px;
   margin-right: 10px;
   border-radius: 2px;
+  position: relative;
+}
+
+.search-button .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  padding: 4px 4px;
+  font-size: 12px;
+  bottom: -30px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+}
+
+
+.search-button:hover .tooltip {
+  opacity: 1;
 }
 
 .search-icon {
@@ -98,6 +126,24 @@
 
 .notifications-icon {
   height: 24px;
+}
+
+.notif-icon-container {
+position: relative;
+}
+
+.notif-icon-count {
+  font-family: Roboto, Arial;
+  font-size: 11px;
+  font-weight: 500;
+  background-color: rgb(206, 0, 0);
+  color: white;
+
+  position: absolute;
+  padding: 2px 5px;
+  border-radius: 8px;
+  top: -3px;
+  right: -3px;
 }
 
 .current-user-picture {
